@@ -1,4 +1,0 @@
-Python==3.6
-OpenCV==4.1.0
-Keras==2.0.9 (TensorFlow Backend)
-IDE==PyCharm
