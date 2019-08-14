@@ -59,7 +59,7 @@ cnn.add(Activation('relu'))
 cnn.add(MaxPooling2D(pool_size=(2,2),
                      strides=2))
 
-cnn.add(Dropout(0.3))
+cnn.add(Dropout(0.2))
 
 # Layer 2: 16 Filters
 cnn.add(Conv2D(filters=16,
@@ -70,7 +70,7 @@ cnn.add(Activation('relu'))
 cnn.add(MaxPooling2D(pool_size=(2,2),
                      strides=2))
 
-cnn.add(Dropout(0.4))
+cnn.add(Dropout(0.2))
 
 # Layer 3: 32 Filters
 cnn.add(Conv2D(filters=32,
@@ -81,7 +81,7 @@ cnn.add(Activation('relu'))
 cnn.add(MaxPooling2D(pool_size=(2,2),
                      strides=2))
 
-cnn.add(Dropout(0.4))
+cnn.add(Dropout(0.2))
 
 # Layer 4: 64 Filters
 cnn.add(Conv2D(filters=64,
@@ -95,14 +95,14 @@ cnn.add(MaxPooling2D(pool_size=(2,2),
 cnn.add(Flatten())
 
 # Fully connected layer 1
-cnn.add(Dense(128))
+cnn.add(Dense(1000))
 cnn.add(Activation('relu'))
 
 # Fully connected layer 2
-cnn.add(Dense(64))
+cnn.add(Dense(700))
 cnn.add(Activation('relu'))
 
-cnn.add(Dropout(0.4))
+cnn.add(Dropout(0.25))
 
 # Final output layer to predict 10 target classes
 cnn.add(Dense(10))
